@@ -3,7 +3,7 @@
   "type": "object",
   "properties": {
     "observed_at": {
-      "type": "date-time"
+      "type": "string"
     },
     "workbook_ids": {
       "type": "array",

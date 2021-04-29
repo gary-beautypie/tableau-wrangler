@@ -44,7 +44,7 @@
   },
   "required": [
     "connection",
-    "ds_name",
+    "ds_id",
     "name",
     "table",
     "text",

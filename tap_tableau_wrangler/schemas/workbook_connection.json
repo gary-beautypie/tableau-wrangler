@@ -78,7 +78,10 @@
       "type": "null"
     },
     "initial_sql": {
-      "type": "null"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "name": {
       "type": [
@@ -101,7 +104,7 @@
     "dataserver_permissions",
     "dbname",
     "directory",
-    "ds_name",
+    "ds_id",
     "initial_sql",
     "name",
     "port",
