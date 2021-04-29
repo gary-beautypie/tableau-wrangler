@@ -1,0 +1,937 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "workbook",
+      "replication_key": "updated_at",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner_id": {
+            "type": "string"
+          },
+          "project_id": {
+            "type": "string"
+          },
+          "project_name": {
+            "type": "string"
+          },
+          "size": {
+            "type": "integer"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "content_url": {
+            "type": "string"
+          },
+          "webpage_url": {
+            "type": "string"
+          },
+          "source_platform": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "source_build": {
+            "type": "string"
+          },
+          "worksheets": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "workbook",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "updated_at"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "owner_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "project_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "project_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "size"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tags"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "content_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "webpage_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "source_platform"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "source_build"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "worksheets"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "workbook_datasource",
+      "replication_key": "updated_at",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "wb_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "caption": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "version": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "stream": "workbook_datasource",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "updated_at"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "wb_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "caption"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "version"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "workbook_connection",
+      "replication_key": "updated_at",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "wb_id": {
+            "type": "string"
+          },
+          "ds_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "class_": {
+            "type": "string"
+          },
+          "dbname": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "server": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "username": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "authentication": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "port": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "channel": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dataserver_permissions": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "directory": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "server_oauth": {
+            "type": "null"
+          },
+          "workgroup_auth_mode": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "query_band": {
+            "type": "null"
+          },
+          "initial_sql": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "caption": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "workbook_connection",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "updated_at"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "wb_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ds_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "class_"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dbname"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "server"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "username"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "authentication"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "port"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "channel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dataserver_permissions"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "directory"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "server_oauth"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "workgroup_auth_mode"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "query_band"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "initial_sql"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "caption"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "workbook_relation",
+      "replication_key": "updated_at",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "wb_id": {
+            "type": "string"
+          },
+          "ds_id": {
+            "type": "string"
+          },
+          "conn_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "connection": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "table": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "text": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "workbook_relation",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "updated_at"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "wb_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ds_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "conn_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "connection"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "table"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "text"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "workbook_table_reference",
+      "replication_key": "updated_at",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "wb_id": {
+            "type": "string"
+          },
+          "ds_id": {
+            "type": "string"
+          },
+          "conn_id": {
+            "type": "string"
+          },
+          "rel_id": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "ref": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "stream": "workbook_table_reference",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "id"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "updated_at"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "wb_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ds_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "conn_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rel_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ref"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "updated_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "workbook_ids",
+      "replication_method": "FULL_TABLE",
+      "key_properties": [
+        "observed_at"
+      ],
+      "schema": {
+        "properties": {
+          "observed_at": {
+            "type": "string"
+          },
+          "workbook_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "stream": "workbook_ids",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "observed_at"
+            ],
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "observed_at"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "workbook_ids"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    }
+  ]
+}

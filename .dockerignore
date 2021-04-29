@@ -1,0 +1,5 @@
+.env/
+Dockerfile
+.secrets
+README.md
+workbook*
