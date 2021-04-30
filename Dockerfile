@@ -6,7 +6,7 @@ RUN apt-get update && \
 COPY . /app
 WORKDIR /app
 
-RUN pip3 install poetry target-csv==0.3.0 && \
+RUN pip3 install poetry target-snowflake==0.2.4 && \
     poetry install --no-dev
 
-CMD poetry run tap-tableau-wrangler --config tap_config.json --catalog catalog.json | target-csv -c target_config.json > /output/state.json
+CMD poetry run tap-tableau-wrangler --config tap_config.json --catalog catalog.json | target-snowflake -c target_config.json >> /output/state.json
